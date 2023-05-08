@@ -1,244 +1,253 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
-
-body {
-    /*
-    background-image: linear-gradient(194deg, #2C3E50, #4CA1AF);
-    background-image: linear-gradient(194deg, #000000, #373737);
-    background-image: linear-gradient(194deg, #44A08D, #093637);
-    background-color: #FFEBFC;*/
+#seccionProductos{
+  background-color: #F489E4;
+  
+}
+#seccionProductos h2{
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
-header {
-    width: 100%;
-    height: 80px;
+/*carrusel*/
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
 }
 
-header img {
-    height: 80%;
-    padding-top: 8px;
+.slider {
+  display: flex;
+  transition: transform 0.5s;
+  
 }
 
-header nav {
-    height: 80%;
-    width: 950px;
-    float: right;
+.slide {
+  flex: 0 0 33.33%;
+  /* Mostrar 3 columnas en cada slide */
+  padding: 10px;
 }
 
-header nav ul {
-    display: inline-flex;
-    list-style-type: none;
-}
+.slide img {
+  max-width: 40%;
+  height: auto;
+  border-radius: 100px;
 
-header nav ul li a {
-    margin: 0px 40px;
-    text-decoration: none;
-    color: black;
-    font-weight: 300;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
 }
-
-#seccionInicio {
-    /*background-image: url('../img/imagen.png'); 
-    background-color: #FFEBFC;
-    background-size: cover; 
-    background-position: center center; 
-    background-repeat: no-repeat;*/
-    width: 100%;
-    height: 550px;
-    margin-top: 40px;
-    display: flex;
-}
-
-#seccionInicio .descripcion {
-    width: 40%;
-    height: 100%;
-    color: black;
-    padding: 0px 50px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-#seccionInicio .descripcion h1 {
-    font-size: 50px;
-    font-weight: 900;
-}
-
-#seccionInicio .descripcion button {
-    padding: 15px 20px;
-    background-color: #F489E4;
-    border-radius: 100px;
-    border: none;
-    margin-top: 40px;
-    font-weight: 400;
-    font-size: 18px;
-    color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 10px 0px #ffffff7c;
-}
-#seccionInicio .producto{
-    width: 60%;
-    height: 100%;
-}
-#seccionInicio img {
-    /*position: absolute;
-    top: 110px;
-    right: 0px;*/
-    width: 800px;
-}
-
-footer {
-    background-color: #FEE6C9;
-    width: 100%;
-    margin-top: 10px;
-    height: 100px;
-}
-
-footer .redesSociales {
-    width: 500px;
-    height: 100px;
-    float: inherit;
-    margin-left: auto; 
-    margin-right: auto;
-}
-
-footer .redesSociales i {
-    font-size: 30px;
-    padding: 30px 40px 0px 60px;
-}
-
-#seccionProductos {
-    width: 100%;
-    height: 500px;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    text-align: center;
-}
-
-#seccionProductos div {
-    width: 50%;
-    height: 280px;
-    margin: 50px;
-    padding: 50px;
-}
-
-#seccionProductos .prod1 {
-    background-color: #F489E4;
-}
-
-#seccionProductos .prod2 {
-    background-color: #FEE6C9;
-}
-
-#seccionProductos .prod3 {
-    background-color: #F489E4;
-}
-
-#seccionProductos h2 {
-text-align: center;
-display: block; 
-margin: 0 auto;
-}
-
-#seccionProductos  img {
-    border-radius: 100px;
-    width: 200px;
-    height: 200px;
-}
-
-#seccionProductos button {
+.slide button {
     background-color: #ffffff;
     color: #F489E4;
     border: 2px solid #F489E4;
     padding: 10px 20px;
-    font-size: 16px;
     border-radius: 100px;
+    
+
 }
-#seccionQuienesSomos{
-    width: 100%;
-    height: 350px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+/*menu*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo img {
+  max-width: 80px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*seccion inicio*/
+#seccionInicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+  padding: 20px;
+}
+
+.descripcion {
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+}
+
+#seccionInicio .descripcion button {
+  padding: 15px 20px;
+  background-color: #F489E4;
+  border-radius: 100px;
+  border: none;
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px 0px #ffffff7c;
+}
+
+@media only screen and (min-width: 600px) {
+  #seccionInicio {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .descripcion {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+/*quienes somos*/
+#seccionQuienesSomos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.imagen {
+  flex: 1;
+  padding: 10px;
+  max-width: 40%;
+}
+
+.descripcion {
+  flex: 1;
+  padding: 10px;
+  max-width: 60%;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+
+  .imagen,
+  .descripcion {
+    max-width: 100%;
+  }
+}
+
+/*footer*/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F489E4;
+
+}
+
+p {
+  text-align: center;
+}
+footer img {
+  max-width: 100px;
+}
+
+.logo,
+.menu,
+.redesSociales {
+  flex-basis: calc(33.33% - 10px);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.redesSociales {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .logo,
+  .menu,
+  .redesSociales {
+    flex-basis: 100%;
+  }
+}
+
+
+/*responsive*/
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  label[for="menu-toggle"] {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  #menu-toggle:checked~nav ul {
     display: flex;
-}
-#seccionQuienesSomos div{
-    width: 50%;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    padding: 25px;
-
-}
-#seccionQuienesSomos img{
-    width: 100%;
-    height: 300px;
-}
-
-/*Diseño responsive*/
-
-@media (max-width: 684px) {
-    header nav {
-        height: 80%;
-        width: 460px;
-        float: right;
-        border: 2px solid #a2f489;
-    }
-    header nav ul li a {   
-        font-size: 10px;
-    }
-    header{    
-        width: 550px;
-    }
-    #seccionInicio {   
-        width: 82%;
-        height: 320px;
-        display: flex;
-    }
-    
-    #seccionInicio .descripcion {
-        width: 35%;
-        height: 100%;
-    }
-    
-    #seccionInicio .descripcion h1 {
-        font-size: 25px;        
-    }
-    #seccionInicio .descripcion button {
-       
-        height: 12px;
-        font-weight: 100;
-       font-size: 12px;
-    }
-    #seccionInicio .producto{
-        width: 40%;
-        height: 100%;
-    }
-    #seccionInicio img {
-        width: 200px;
-    }
-    footer {
-        width: 100%;
-    }
-    #seccionProductos {
-        width: 82%;
-        height: 400px;
-    }
-    
-    #seccionProductos div img{
-        width: 20%;
-        height: 280px;
-        margin: 12px;
-        padding: 15px;
-    }
-    #seccionQuienesSomos{
-        width: 82%;
-        height: 350px;  
-    }
-    #seccionProductos .producto img {
-        border-radius: 100px;
-        width: 100px;
-        height: 100px;
-    }
-    #seccionProductos button {
-        font-size: 12px;
-    }
-    
+  }
 }
