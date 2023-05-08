@@ -68,6 +68,7 @@
 
 /*menu*/
 header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -98,12 +99,14 @@ nav ul li a {
 
 /*seccion inicio*/
 #seccionInicio {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   max-width: 100%;
   padding: 20px;
+  overflow: hidden;
 }
 
 .descripcion {
@@ -123,6 +126,37 @@ nav ul li a {
   border: none;
   color: rgb(255, 255, 255);
   box-shadow: 0px 0px 10px 0px #ffffff7c;
+}
+
+.circulos {
+  position: absolute;
+  border-radius: 100%;
+ 
+}
+
+.circulo-uno {
+  background-color: #FEE6C9; 
+  top: 10%; 
+  left: -3%; 
+  width: 20%; 
+  height: 30%;
+  z-index: -1;
+}
+.circulo-dos {
+  background-color: #FEE6C9; 
+  top: 30%; 
+  left: 30%; 
+  width: 50%; 
+  height: 75%;
+  z-index: -1;
+}
+.circulo-tres {
+  background-color: #F489E4; 
+  top: -15%; 
+  left: 60%; 
+  width: 50%; 
+  height: 70%;
+  z-index: -2;
 }
 
 @media only screen and (min-width: 600px) {
