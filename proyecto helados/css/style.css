@@ -2,11 +2,12 @@
 
 #seccionProductos{
   background-color: #F489E4;
-  
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; 
 }
 #seccionProductos h2{
-  align-items: center;
-  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  top: 50%;
 }
 
 /*carrusel*/
@@ -41,8 +42,6 @@
     border: 2px solid #F489E4;
     padding: 10px 20px;
     border-radius: 100px;
-    
-
 }
 
 .prev,
@@ -76,7 +75,7 @@ header {
 }
 
 .logo img {
-  max-width: 80px;
+  max-width: 100px;
   height: auto;
 }
 
@@ -91,10 +90,60 @@ nav ul li {
   margin-left: 20px;
 }
 
-nav ul li a {
+nav ul li a, footer ul li a {
   text-decoration: none;
   color: #000;
   font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  #menu-toggle:checked ~ ul {
+    display: block;
+  }
+  
+  nav ul {
+    display: none;
+    float: left;
+    clear: both;
+    width: 100%;
+  }
+  
+  nav ul li {
+    text-align: center;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 10px;
+  }
+}
+@media (min-width: 769px) {
+  label,
+  #menu-toggle {
+    display: none;
+  }
+  
+  nav ul {
+    display: block;
+    float: none;
+    width: auto;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 }
 
 /*seccion inicio*/
@@ -107,11 +156,17 @@ nav ul li a {
   max-width: 100%;
   padding: 20px;
   overflow: hidden;
+  
 }
-
+/*#seccionInicio > div {
+  flex: 1;
+  max-width: 50%; 
+}*/
 .descripcion {
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
+  flex-direction: column;
+  width: 60%;
 }
 
 .producto img {
@@ -131,7 +186,6 @@ nav ul li a {
 .circulos {
   position: absolute;
   border-radius: 100%;
- 
 }
 
 .circulo-uno {
@@ -211,19 +265,23 @@ nav ul li a {
 footer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content:center;
   align-items: center;
+  text-align: center;
   background-color: #F489E4;
+  font-family: 'Montserrat', sans-serif;
 
 }
 
-p {
-  text-align: center;
+footer p {
+  margin-top: 10px;
 }
 footer img {
   max-width: 100px;
 }
-
+footer ul {
+  list-style: none;
+}
 .logo,
 .menu,
 .redesSociales {
@@ -235,6 +293,10 @@ footer img {
 .redesSociales {
   text-align: center;
 }
+.redesSociales i {
+  font-size: 2em; 
+  margin: 0 10px; 
+}
 
 @media (max-width: 768px) {
 
@@ -242,46 +304,5 @@ footer img {
   .menu,
   .redesSociales {
     flex-basis: 100%;
-  }
-}
-
-
-/*responsive*/
-
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .logo {
-    margin-bottom: 20px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  #menu-toggle {
-    display: none;
-  }
-
-  label[for="menu-toggle"] {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  nav ul {
-    display: none;
-  }
-
-  #menu-toggle:checked~nav ul {
-    display: flex;
   }
 }

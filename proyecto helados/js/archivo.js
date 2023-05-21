@@ -56,3 +56,14 @@ whatsappButtons.forEach(function(button) {
         window.open("https://wa.me/" + phoneNumber);
     });
 });
+
+window.addEventListener('DOMContentLoaded', function() {
+    var links = document.querySelectorAll('nav ul li a');
+    Array.prototype.forEach.call(links, function(link) {
+      link.addEventListener('click', function() {
+        var checkbox = document.getElementById('menu-toggle');
+        checkbox.checked = false;
+      });
+    });
+  });
+  
