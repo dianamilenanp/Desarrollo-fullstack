@@ -1,0 +1,5 @@
+usuario: admin
+contraseña: admin
+
+base de datos
+proyecto_heladeria
