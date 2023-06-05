@@ -19,27 +19,32 @@
 include 'db/conexion.php';
 $query = "SELECT * FROM helados";
 ?>
-    <header>
-        <div class="logo">
-            <img src="img/logoHeladeria.png" alt="logo_empresa">
+<nav class="navbar">
+    <div class="navbar-container container">
+        <input type="checkbox" name="" id="">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
         </div>
-        <nav>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle">&#9776;</label>
-            <ul>
-                <li>
-                    <a href="index.php">Inicio</a>
-                </li>
-                
-            </ul>
-        </nav>
-    </header>
+        <ul class="menu-items">
+            <li><a href="index.php#seccionInicio" class="inicio">Inicio</a></li>
+            <li> <a href="index.php#seccionProductos">Nuestros productos</a></li>
+            <li><a href="index.php#seccionQuienesSomos">Sobre nosotros</a></li>
+            <li><a href="index.php#seccionQuienesSomos">Contáctenos</a></li>
+            
+        </ul>
+        <img src="img/logoHeladeria.png" alt="logo_empresa" class="logo" >
+    </div>
+</nav>
+<br><br>
     <section>
 
     <h1>Administrar productos</h1>
     <form action="crear.php" method="post">
     <input  class="btn btn-success" name="btnCrear"  type="submit" value="Crear" >
 </form>
+<div class="tabla">
     <table class="table">
         <?php 
 
@@ -53,6 +58,7 @@ echo '
       <th scope="col">Descripción</th>
       <th scope="col">Precio</th>
       <th scope="col">Cantidad</th>
+      <th scope="col">Estado</th>
       <th scope="col"></th>
       <th scope="col"></th>
     </tr>
@@ -94,6 +100,7 @@ echo '
 '</tbody>'
   ?>
 </table>
+</div>
 <?php
 
 
@@ -104,7 +111,7 @@ echo '
     </section>
 
     <footer>
-        <div class="logo">
+        <div class="logo-footer">
             <img src="img/logoHeladeria.png" alt="">
         </div>
         <div class="menu">    
@@ -126,7 +133,7 @@ echo '
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-facebook-f"></i>
         </div>
-        <p>Derechos reservados Diana Niño</p>
+        <p class="copiright">Copyright@frozen Magic</p>
     </footer>
 </body>
 

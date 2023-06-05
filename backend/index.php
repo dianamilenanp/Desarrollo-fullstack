@@ -18,32 +18,26 @@
 include 'db/conexion.php';
 $query = "SELECT * FROM helados WHERE estado=1";
 ?>
-    <header>
-        <div class="logo">
-            <img src="img/logoHeladeria.png" alt="logo_empresa">
-        </div>
-        <nav>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle">&#9776;</label>
-            <ul>
-                <li>
-                    <a href="#seccionInicio">Inicio</a>
-                </li>
-                <li>
-                    <a href="#seccionProductos">Nuestros productos</a>
-                </li>
-                <li>
-                    <a href="#seccionQuienesSomos">Sobre nosotros</a>
-                </li>
-                <li>
-                    <a href="#seccionQuienesSomos">Contáctenos</a>
-                </li>
-                <li>
-                    <a href="login.php">Ingresar</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+            <div class="navbar-container container">
+                <input type="checkbox" name="" id="">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ul class="menu-items">
+                    <li><a href="#seccionInicio" class="inicio">Inicio</a></li>
+                    <li> <a href="#seccionProductos">Nuestros productos</a></li>
+                    <li><a href="#seccionQuienesSomos">Sobre nosotros</a></li>
+                    <li><a href="#seccionQuienesSomos">Contáctenos</a></li>
+                    <li>
+                        <a href="login.php">Ingresar</a>
+                    </li> 
+                </ul>
+                <img src="img/logoHeladeria.png" alt="logo_empresa" class="logo" >
+            </div>
+    </nav>
     <section id="seccionInicio">
         <div class="descripcion">
             <h1>Helados hechos con pasión, ya probaste el tuyo?</h1>
@@ -100,7 +94,7 @@ $query = "SELECT * FROM helados WHERE estado=1";
         </div>
     </section>
     <footer>
-        <div class="logo">
+        <div class="logo-footer">
             <img src="img/logoHeladeria.png" alt="">
         </div>
         <div class="menu">    
@@ -122,7 +116,7 @@ $query = "SELECT * FROM helados WHERE estado=1";
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-facebook-f"></i>
         </div>
-        <p>Derechos reservados Diana Niño</p>
+        <p class="copiright">Copyright@frozen Magic</p>
     </footer>
 </body>
 

@@ -615,21 +615,3 @@ footer .copiright {
     font-size: 12px;
   }
 }
-
-/*login*/
-.main-frame-dat{
-  width: 50%;
-  padding: 50px;
-  height: 406px;
-  border-radius: 30px;
-
-  box-shadow: 0px 0px 20px 0px rgba(10, 10, 10, 0.555);
-
-  margin: 7% auto;
-}
-.main-frame-dat label{
-  font-weight: bold;
-}
-button{
-  float:right
-}

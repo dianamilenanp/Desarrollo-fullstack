@@ -13,29 +13,24 @@
     <title>Frozen Magic</title>
 </head>
 <body>
-<header>
-        <div class="logo">
-            <img src="img/logoHeladeria.png" alt="logo_empresa">
+<nav class="navbar">
+    <div class="navbar-container container">
+        <input type="checkbox" name="" id="">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
         </div>
-        <nav>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle">&#9776;</label>
-            <ul>
-                <li>
-                    <a href="index.php#seccionInicio">Inicio</a>
-                </li>
-                <li>
-                    <a href="index.php#seccionProductos">Nuestros productos</a>
-                </li>
-                <li>
-                    <a href="index.php#seccionQuienesSomos">Sobre nosotros</a>
-                </li>
-                <li>
-                    <a href="index.php#seccionQuienesSomos">Contáctenos</a>
-                </li> 
-            </ul>
-        </nav>
-    </header>
+        <ul class="menu-items">
+            <li><a href="index.php#seccionInicio" class="inicio">Inicio</a></li>
+            <li> <a href="index.php#seccionProductos">Nuestros productos</a></li>
+            <li><a href="index.php#seccionQuienesSomos">Sobre nosotros</a></li>
+            <li><a href="index.php#seccionQuienesSomos">Contáctenos</a></li>
+            
+        </ul>
+        <img src="img/logoHeladeria.png" alt="logo_empresa" class="logo" >
+    </div>
+</nav>
     <div class="main-frame-dat">
     <form action="" method="GET">
         <div class="form-group">
@@ -47,7 +42,7 @@
             <input type="text" name="contraseña" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña">
         </div>
        
-        <button type="submit" name="Ingresar" id="Ingresar" class="btn btn-warning">Ingresar</button>
+        <button type="submit" name="Ingresar" id="Ingresar" class="btn boton">Ingresar</button>
     </form>
 
     <?php
@@ -69,7 +64,7 @@
 
     </div>
     <footer>
-        <div class="logo">
+        <div class="logo-footer">
             <img src="img/logoHeladeria.png" alt="">
         </div>
         <div class="menu">    
@@ -91,7 +86,7 @@
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-facebook-f"></i>
         </div>
-        <p>Derechos reservados Diana Niño</p>
+        <p class="copiright">Copyright@frozen Magic</p>
     </footer>
 </body>
 
